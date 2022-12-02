@@ -2,18 +2,27 @@ import sys
 import os
 
 init_pyscript = """
-import re
+import sys
+import os
 
-QUESTION = '\033[94m'
-ENDC = '\033[0m'
+def solution_1(input: str):
+    return 1
+
+def solution_2(input: str):
+    return 2
+
 
 if __name__ == "__main__":
-    seating_chart_p1 = []
-    directory = re.sub("\/.*", "", __file__)
-    with open(f'{directory}/test.txt', 'r') as infile:
-        for line in infile:
-            value = line.replace('\\n', '')
-            seating_chart_p1.append(value)
+    is_test = sys.argv[1]
+    dir = os.path.dirname(os.path.realpath(__file__))
+    file = "test.txt" if eval(is_test.split("=")[1]) else "input.txt"
+    
+    with open(f'{dir}/{file}', 'r') as infile:
+        input = infile.read()
+
+    print("Solution 1:", solution_1(input))
+    print("Solution 2:", solution_2(input))
+
 """
 
 directory_name = sys.argv[1]
