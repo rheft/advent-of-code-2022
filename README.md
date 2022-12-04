@@ -2,5 +2,5 @@
 https://adventofcode.com/  
 
 Solutions fall under their `day{number}` folder (day1, day2, etc.)  
-A Makefile also exists to run each solution via the command:  
-`make day{number}`
+
+Over/Under I make it to day 14?
