@@ -1,8 +1,7 @@
 import sys
 import os
 
-init_pyscript = """
-import sys
+init_pyscript = """import sys
 import os
 
 def solution_1(input: str):
