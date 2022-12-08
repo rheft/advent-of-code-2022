@@ -1,4 +1,4 @@
-### 2020 Advent of Code fun
+### 2022 Advent of Code fun
 https://adventofcode.com/  
 
 Solutions fall under their `day{number}` folder (day1, day2, etc.)  
