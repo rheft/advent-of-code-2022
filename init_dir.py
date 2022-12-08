@@ -4,23 +4,25 @@ import os
 init_pyscript = """import sys
 import os
 
-def solution_1(input: str):
+def solution_1(input: str, is_test: bool = True):
     return 1
 
-def solution_2(input: str):
+def solution_2(input: str, is_test: bool = True):
     return 2
 
 
 if __name__ == "__main__":
-    is_test = sys.argv[1]
+    is_test_arg = sys.argv[1]
     dir = os.path.dirname(os.path.realpath(__file__))
-    file = "test.txt" if eval(is_test.split("=")[1]) else "input.txt"
+
+    is_test = eval(is_test_arg.split("=")[1])
+    file = "test.txt" if is_test else "input.txt"
     
     with open(f'{dir}/{file}', 'r') as infile:
         input = infile.read()
 
-    print("Solution 1:", solution_1(input))
-    print("Solution 2:", solution_2(input))
+    print("Solution 1:", solution_1(input, is_test))
+    print("Solution 2:", solution_2(input, is_test))
 
 """
 
